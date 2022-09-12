@@ -1,0 +1,7 @@
+A = [ 3,1, 2, 4, 5 ]
+l1 = len(A)
+area = 0
+for i in range(l1) :
+      for j in range(i + 1, l1) :
+        area = max(area, min(A[j], A[i]) * (j - i))
+print(area)
