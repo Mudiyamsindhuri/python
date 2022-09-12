@@ -1,0 +1,12 @@
+def cs(n, start):
+    if n == 0:
+        return 1
+    count = 0
+    for i in range(start, 5):
+        count += cs(n - 1, i)
+    return count
+n = int(input("enter value of n"))
+if n<=0:
+    print("enter a valid input")
+else:
+    print(cs(n,0))
