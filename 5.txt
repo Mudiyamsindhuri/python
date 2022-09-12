@@ -1,0 +1,12 @@
+a=int(input("enter number of bread purchased"))
+a1=int(input("enter number of day old bread purchased"))
+if a1<0 or a<0:
+    print("invalid input")
+    quit()
+price=185
+rbp=a*price
+odobp=price*60*a1
+print("regular price","{:.2f}".format(price))
+print("amount for new loaves=","{:.2f}".format(rbp))
+print("amount of day old loaves","{:.2f}".format(odobp))
+print("Total Amount to be paid",rbp+odobp)
