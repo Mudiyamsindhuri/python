@@ -1,0 +1,30 @@
+def isitso(S) :
+        num=False
+        exp= False
+        sign=False
+        dec = False
+        for char in S:
+            if char>='0' and char <= '9': num = True     
+            elif char == 'e' or char == 'E':
+                if exp or not num: return False
+                else:
+                    exp= True
+                    num = False
+                    sign= False
+                    dec=False
+            elif char == '+' or char == '-':
+                if sign or num or dec:
+                     return False
+                else: 
+                    sign = True
+            elif char == '.':
+                if dec or exp: 
+                    return False
+                else: 
+                    dec = True
+            else: 
+                return False
+        return num
+inputt=input("enter your num to be checked\n")
+print(isitso(inputt))
+
